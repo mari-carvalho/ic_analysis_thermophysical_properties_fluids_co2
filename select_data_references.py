@@ -8,22 +8,25 @@ file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\Densidades
 workbook = load_workbook(file_path)
 
 # DADOS LÍQUIDO:
-# selecionar a segunda aba da planilha:
-sheet = workbook.worksheets[1]
+# selecionar a primeira aba da planilha:
+sheet = workbook.worksheets[0]
 
 # inicializar listas para armazenar os dados:
+# referência 27
 feed_co2_liquid_27 = []
 feed_co_liquid_27 = []
 temperature_liquid_27 = []
 pressure_liquid_27 = []
 experimental_liquid_27 = []
 
+# referência 25
 feed_co2_liquid_25 = []
 feed_co_liquid_25 = []
 temperature_liquid_25 = []
 pressure_liquid_25 = []
 experimental_liquid_25 = []
 
+# referência 7
 feed_co2_liquid_7 = []
 feed_co_liquid_7 = []
 temperature_liquid_7 = []
@@ -120,7 +123,7 @@ print("Pressure (gas 25):", pressure_gas_25)
 print("Experimental (gas 25):", experimental_gas_25)
 
 # caminho do arquivo:
-filtered_file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\filtered_data.xlsx'
+filtered_file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\filtered_data_references.xlsx'
 
 # carregar a planilha existente:
 try:
