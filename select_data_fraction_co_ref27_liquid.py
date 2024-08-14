@@ -103,6 +103,12 @@ temperature_liquid_27_046 = []
 pressure_liquid_27_046 = []
 experimental_liquid_27_046 = []
 
+feed_co2_liquid_27_019 = []
+feed_co_liquid_27_019 = []
+temperature_liquid_27_019 = []
+pressure_liquid_27_019 = []
+experimental_liquid_27_019 = []
+
 for row in sheet.iter_rows(min_row=2, values_only=True):
     # verificar se o valor da coluna G (index 5) é 27
     if row[1] == 0.004:
@@ -195,6 +201,12 @@ for row in sheet.iter_rows(min_row=2, values_only=True):
         temperature_liquid_27_046.append(row[2])
         pressure_liquid_27_046.append(row[3])
         experimental_liquid_27_046.append(row[4])
+    elif row[1] == 0.019:
+        feed_co2_liquid_27_019.append(row[0])
+        feed_co_liquid_27_019.append(row[1])
+        temperature_liquid_27_019.append(row[2])
+        pressure_liquid_27_019.append(row[3])
+        experimental_liquid_27_019.append(row[4])
 
 # Exibindo os dados armazenados:
 
@@ -288,6 +300,12 @@ print("Temperature (Liquid 27 - 0.046):", temperature_liquid_27_046)
 print("Pressure (Liquid 27 - 0.046):", pressure_liquid_27_046)
 print("Experimental (Liquid 27 - 0.046):", experimental_liquid_27_046)
 
+print("CO2 Feed (Liquid 27 - 0.046):", feed_co2_liquid_27_019)
+print("CO Feed (Liquid 27 - 0.046):", feed_co_liquid_27_019)
+print("Temperature (Liquid 27 - 0.046):", temperature_liquid_27_019)
+print("Pressure (Liquid 27 - 0.046):", pressure_liquid_27_019)
+print("Experimental (Liquid 27 - 0.046):", experimental_liquid_27_019)
+
 # criando a nova planilha:
 # caminho do arquivo:
 filtered_file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\fraction_27_liquid.xlsx'
@@ -318,7 +336,8 @@ for ref_value, data in [(0.004, (feed_co2_liquid_27_004, feed_co_liquid_27_004, 
                         (0.117, (feed_co2_liquid_27_117, feed_co_liquid_27_117, temperature_liquid_27_117, pressure_liquid_27_117, experimental_liquid_27_117)),
                         (0.115, (feed_co2_liquid_27_115, feed_co_liquid_27_115, temperature_liquid_27_115, pressure_liquid_27_115, experimental_liquid_27_115)),
                         (0.089, (feed_co2_liquid_27_089, feed_co_liquid_27_089, temperature_liquid_27_089, pressure_liquid_27_089, experimental_liquid_27_089)),
-                        (0.046, (feed_co2_liquid_27_046, feed_co_liquid_27_046, temperature_liquid_27_046, pressure_liquid_27_046, experimental_liquid_27_046))]:
+                        (0.046, (feed_co2_liquid_27_046, feed_co_liquid_27_046, temperature_liquid_27_046, pressure_liquid_27_046, experimental_liquid_27_046)),
+                        (0.019, (feed_co2_liquid_27_019, feed_co_liquid_27_019, temperature_liquid_27_019, pressure_liquid_27_019, experimental_liquid_27_019))]:
 
     sheet_name = f'frac_{ref_value}_data_liquid'
     ws = workbook.create_sheet(title=sheet_name)

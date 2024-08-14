@@ -9,7 +9,7 @@ workbook = load_workbook(file_path)
 
 # DADOS LÍQUIDO:
 # selecionar a primeira aba da planilha:
-sheet = workbook.worksheets[0]
+sheet = workbook.worksheets[1]
 
 # inicializar listas para armazenar os dados:
 # referência 27
