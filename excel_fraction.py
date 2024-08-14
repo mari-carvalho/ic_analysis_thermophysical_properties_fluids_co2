@@ -3,9 +3,29 @@ import openpyxl.utils.cell
 import pandas as pd
 from openpyxl import load_workbook
 from openpyxl import Workbook
-from select_data_fraction_co_ref25_gas import data_fraction_ref27_gas
-from select_data_fraction_co_ref27_gas import data_fraction_ref27_gas
-from select_data_fraction_co_ref25_liquid import data_fraction_ref25_liquid
-from select_data_fraction_co_ref27_liquid import data_fraction_ref27_liquid
-from select_data_fraction_co_ref7_liquid import data_fraction_ref7_liquid
 
+
+files = [
+    r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\fraction_27_liquid.xlsx",
+    r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\fraction_25_liquid.xlsx",
+    r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\fraction_7_liquid.xlsx",
+    r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\fraction_27_gas.xlsx",
+    r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\fraction_25_gas.xlsx"
+]
+
+wb_unido = Workbook()
+ws_unido = wb_unido.active
+ws_unido.title = "Unificado"
+
+linha_atual = 1
+
+for file in files:
+    wb = load_workbook(file)
+    ws = wb.active
+
+    for row in ws.iter_rows(values_only=True):
+        ws_unido.append(row)
+        linha_atual += 1
+
+
+wb_unido.save("tabela_unificada.xlsx")
