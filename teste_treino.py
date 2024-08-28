@@ -17,6 +17,7 @@ for sheet in sheet_names:
 data = pd.concat(dfs) # combina os dados de todas as abas
 
 print(data.columns)
+print(data)
 
 # Selecionar as colunas de interesse, incluindo a densidade como feature:
 features = data[['CO2', 'CO', 'TEMPERATURE', 'PRESSURE', 'EXPE. DENSITY', 'ID']]
