@@ -13,6 +13,21 @@ def plot_histogram(df, title):
     if not df_filtered.empty:
         df.hist(figsize=(12,10), bins=30, edgecolor='black')
         plt.suptitle(title)
+
+        for idx, ax in enumerate(plt.gcf().axes):
+            nome_coluna = df_filtered.columns[idx]
+            palavras = nome_coluna.split()
+
+            if idx < 2:
+                novo_rotulo = ' '.join(palavras[:2])
+            else:
+                novo_rotulo = palavras[0]
+
+            ax.set_xlabel(novo_rotulo)
+            ax.set_ylabel('Frequency')
+
+
+
         plt.tight_layout()
         plt.show()
 
@@ -40,13 +55,13 @@ file_path_7 = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\Seleçã
 
 # Processar a plotar os histogramas:
 df_27 = process_file(file_path_27)
-plot_histogram(df_27, 'Histogramas - Dados Líquido Train - Ref 27')
+plot_histogram(df_27, 'Histograms - Data Liquid Train - Ref 27')
 
 df_25 = process_file(file_path_25)
-plot_histogram(df_25, 'Histogramas - Dados Líquido Train - Ref 25')
+plot_histogram(df_25, 'Histograms - Data Liquid Train - Ref 25')
 
 df_7 = process_file(file_path_7)
-plot_histogram(df_7, 'Histogramas - Dados Líquido Train - Ref 7')
+plot_histogram(df_7, 'Histograms - Data Liquid Train - Ref 7')
 
 # Salvar DataFrames em um novo arquivo Excel:
 outpu_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\Seleção Treino_Teste\liquid_train.xlsx"
