@@ -11,7 +11,7 @@ def plot_histogram(df, title):
     df_filtered = df.dropna(axis=1, how='all')
 
     if not df_filtered.empty:
-        df.hist(figsize=(12,10), bins=30, edgecolor='black')
+        df.hist(figsize=(12,10), bins=30, edgecolor='pink')
         plt.suptitle(title)
 
         for idx, ax in enumerate(plt.gcf().axes):
@@ -49,9 +49,9 @@ def process_file(file_path):
     return pd.DataFrame(dados)
 
 # Caminhos dos arquivos:
-file_path_27 = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\Seleção Treino_Teste\Data Fraction Test\Fraction Liquid Test\fraction_27_liquid_test.xlsx"
-file_path_25 = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\Seleção Treino_Teste\Data Fraction Test\Fraction Liquid Test\fraction_25_liquid_test.xlsx"
-file_path_7 = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\Seleção Treino_Teste\Data Fraction Test\Fraction Liquid Test\fraction_7_liquid_test.xlsx"
+file_path_27 = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CO+CO2\Seleção Treino_Teste\Data Fraction Test\Fraction Liquid Test\fraction_27_liquid_test.xlsx"
+file_path_25 = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CO+CO2\Seleção Treino_Teste\Data Fraction Test\Fraction Liquid Test\fraction_25_liquid_test.xlsx"
+file_path_7 = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CO+CO2\Seleção Treino_Teste\Data Fraction Test\Fraction Liquid Test\fraction_7_liquid_test.xlsx"
 
 # Processar a plotar os histogramas:
 df_27 = process_file(file_path_27)

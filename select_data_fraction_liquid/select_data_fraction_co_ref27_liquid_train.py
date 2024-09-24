@@ -5,7 +5,7 @@ from openpyxl import load_workbook
 from openpyxl import Workbook
 
 # Caminho do arquivo
-file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\Seleção Treino_Teste\Filtered References Train\References Liquid Train\filtered_data_references_liquid_train.xlsx"
+file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CO+CO2\Seleção Treino_Teste\Filtered References Train\References Liquid Train\filtered_data_references_liquid_train.xlsx"
 workbook = load_workbook(file_path)
 
 # DADOS LÍQUIDO - REFERÊNCIA 27 - 0.004:
@@ -308,7 +308,7 @@ print("Experimental (Liquid 27 - 0.046):", experimental_27_019)
 
 # criando a nova planilha:
 # caminho do arquivo:
-filtered_file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\Seleção Treino_Teste\Data Fraction Train\Fraction Liquid Train\fraction_27_liquid_train.xlsx'
+filtered_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CO+CO2\Seleção Treino_Teste\Data Fraction Train\Fraction Liquid Train\fraction_27_liquid_train.xlsx"
 
 # carregar a planilha existente:
 try:
