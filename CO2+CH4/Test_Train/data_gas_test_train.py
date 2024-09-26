@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 import os
 
 # Ler a planilha com várias abas:
-file_path = r"C:\Users\03950025081\Desktop\Metan Databank NOVO.xlsx"
+file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Metan Databank NOVO.xlsx"
 sheet_names = pd.ExcelFile(file_path).sheet_names # Obtém os nomes das abas
 
 # Lista para armazenar DataFrames:
@@ -26,7 +26,7 @@ features = data[['ID', 'x CH4', 'T[K]', 'P atm', 'V cc/g-mol', 'rho [kg/m3]']]
 X_train, X_test = train_test_split(features, test_size=0.25, random_state=42) # random_state=42 garante que a separação dos dados será sempre a mesma na execução do código
 
 # Definir o caminho da pasta onde deseja salvar os arquivos:
-folder_path = r"C:\Users\03950025081\Desktop"
+folder_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Train_Test Gas"
 
 # Criar o caminho completo para os arquivos:
 train_file_path = os.path.join(folder_path, 'dados_treinamento_com_densidade_gas.xlsx')
