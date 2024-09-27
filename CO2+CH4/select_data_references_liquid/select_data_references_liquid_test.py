@@ -76,8 +76,8 @@ for sheet in workbook.sheetnames:
     del workbook[sheet]
 
 # adicionar os dados filtrados do líquido:
-for ref_value, data in [(36, (feed_ch4_36, v_36, temperature_36, pressure_36, experimental_36, feed_co_36)),
-                        (40, (feed_ch4_40, v_40, temperature_40, pressure_40, experimental_40, feed_co_40))]:
+for ref_value, data in [(36, (feed_ch4_36, temperature_36,  pressure_36, v_36, experimental_36, feed_co_36)),
+                        (40, (feed_ch4_40, temperature_40, pressure_40, v_40, experimental_40, feed_co_40))]:
 
     sheet_name = f'ref_{ref_value}_data_Liquid'
     ws = workbook.create_sheet(title=sheet_name)

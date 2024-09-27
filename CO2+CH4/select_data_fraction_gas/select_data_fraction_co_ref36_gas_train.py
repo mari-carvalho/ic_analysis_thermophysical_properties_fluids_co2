@@ -13,302 +13,201 @@ workbook = load_workbook(file_path)
 sheet = workbook.worksheets[0]
 
 # inicializar listas para armazenar os dados:
-feed_co2_27_004 = []
-feed_co_27_004 = []
-temperature_27_004 = []
-pressure_27_004 = []
-experimental_27_004 = []
+feed_ch4_36_058 = []
+v_36_058 = []
+temperature_36_058 = []
+pressure_36_058 = []
+experimental_36_058 = []
 
-feed_co2_27_007 = []
-feed_co_27_007 = []
-temperature_27_007 = []
-pressure_27_007 = []
-experimental_27_007 = []
+feed_ch4_36_0098 = []
+v_36_0098 = []
+temperature_36_0098 = []
+pressure_36_0098 = []
+experimental_36_0098 = []
 
-feed_co2_27_0098 = []
-feed_co_27_0098 = []
-temperature_27_0098 = []
-pressure_27_0098 = []
-experimental_27_0098 = []
+feed_ch4_36_0137 = []
+v_36_0137 = []
+temperature_36_0137 = []
+pressure_36_0137 = []
+experimental_36_0137 = []
 
-feed_co2_27_010107 = []
-feed_co_27_010107 = []
-temperature_27_010107 = []
-pressure_27_010107 = []
-experimental_27_010107 = []
+feed_ch4_36_0167 = []
+v_36_0167 = []
+temperature_36_0167 = []
+pressure_36_0167 = []
+experimental_36_0167 = []
 
-feed_co2_27_05031 = []
-feed_co_27_05031 = []
-temperature_27_05031 = []
-pressure_27_05031 = []
-experimental_27_05031 = []
+feed_ch4_36_0177 = []
+v_36_0177 = []
+temperature_36_0177 = []
+pressure_36_0177 = []
+experimental_36_0177 = []
 
-feed_co2_27_03 = []
-feed_co_27_03 = []
-temperature_27_03 = []
-pressure_27_03 = []
-experimental_27_03 = []
+feed_ch4_36_0182 = []
+v_36_0182 = []
+temperature_36_0182 = []
+pressure_36_0182 = []
+experimental_36_0182 = []
 
-feed_co2_27_25254 = []
-feed_co_27_25254 = []
-temperature_27_25254 = []
-pressure_27_25254 = []
-experimental_27_25254 = []
+feed_ch4_36_0247 = []
+v_36_0247 = []
+temperature_36_0247 = []
+pressure_36_0247 = []
+experimental_36_0247 = []
 
-feed_co2_27_065 = []
-feed_co_27_065 = []
-temperature_27_065 = []
-pressure_27_065 = []
-experimental_27_065 = []
+feed_ch4_36_03 = []
+v_36_03 = []
+temperature_36_03 = []
+pressure_36_03 = []
+experimental_36_03 = []
 
-feed_co2_27_50183 = []
-feed_co_27_50183 = []
-temperature_27_50183 = []
-pressure_27_50183 = []
-experimental_27_50183 = []
+feed_ch4_36_0214 = []
+v_36_0214 = []
+temperature_36_0214 = []
+pressure_36_0214 = []
+experimental_36_0214 = []
 
-feed_co2_27_138 = []
-feed_co_27_138 = []
-temperature_27_138 = []
-pressure_27_138 = []
-experimental_27_138 = []
+feed_ch4_36_0301 = []
+v_36_0301 = []
+temperature_36_0301 = []
+pressure_36_0301 = []
+experimental_36_0301 = []
 
-feed_co2_27_134 = []
-feed_co_27_134 = []
-temperature_27_134 = []
-pressure_27_134 = []
-experimental_27_134 = []
+feed_ch4_36_0321 = []
+v_36_0321 = []
+temperature_36_0321 = []
+pressure_36_0321 = []
+experimental_36_0321 = []
 
-feed_co2_27_117 = []
-feed_co_27_117 = []
-temperature_27_117 = []
-pressure_27_117 = []
-experimental_27_117 = []
+feed_ch4_36_034 = []
+v_36_034 = []
+temperature_36_034 = []
+pressure_36_034 = []
+experimental_36_034 = []
 
-feed_co2_27_115 = []
-feed_co_27_115 = []
-temperature_27_115 = []
-pressure_27_115 = []
-experimental_27_115 = []
+feed_ch4_36_0349 = []
+v_36_0349 = []
+temperature_36_0349 = []
+pressure_36_0349 = []
+experimental_36_0349 = []
 
-feed_co2_27_089 = []
-feed_co_27_089 = []
-temperature_27_089 = []
-pressure_27_089 = []
-experimental_27_089 = []
+feed_ch4_36_0408 = []
+v_36_0408 = []
+temperature_36_0408 = []
+pressure_36_0408 = []
+experimental_36_0408 = []
 
-feed_co2_27_046 = []
-feed_co_27_046 = []
-temperature_27_046 = []
-pressure_27_046 = []
-experimental_27_046 = []
-
-feed_co2_27_019 = []
-feed_co_27_019 = []
-temperature_27_019 = []
-pressure_27_019 = []
-experimental_27_019 = []
+feed_ch4_36_0508 = []
+v_36_0508 = []
+temperature_36_0508 = []
+pressure_36_0508 = []
+experimental_36_0508 = []
 
 for row in sheet.iter_rows(min_row=2, values_only=True):
-    # verificar se o valor da coluna G (index 5) é 27
-    if row[1] == 0.004:
-        feed_co2_27_004.append(row[0])
-        feed_co_27_004.append(row[1])
-        temperature_27_004.append(row[2])
-        pressure_27_004.append(row[3])
-        experimental_27_004.append(row[4])
-    elif row[1] == 0.007:
-        feed_co2_27_007.append(row[0])
-        feed_co_27_007.append(row[1])
-        temperature_27_007.append(row[2])
-        pressure_27_007.append(row[3])
-        experimental_27_007.append(row[4])
-    elif row[1] == 0.0098:
-        feed_co2_27_0098.append(row[0])
-        feed_co_27_0098.append(row[1])
-        temperature_27_0098.append(row[2])
-        pressure_27_0098.append(row[3])
-        experimental_27_0098.append(row[4])
-    elif row[1] == 0.010107:
-        feed_co2_27_010107.append(row[0])
-        feed_co_27_010107.append(row[1])
-        temperature_27_010107.append(row[2])
-        pressure_27_010107.append(row[3])
-        experimental_27_010107.append(row[4])
-    elif row[1] == 0.05031:
-        feed_co2_27_05031.append(row[0])
-        feed_co_27_05031.append(row[1])
-        temperature_27_05031.append(row[2])
-        pressure_27_05031.append(row[3])
-        experimental_27_05031.append(row[4])
-    elif row[1] == 0.03:
-        feed_co2_27_03.append(row[0])
-        feed_co_27_03.append(row[1])
-        temperature_27_03.append(row[2])
-        pressure_27_03.append(row[3])
-        experimental_27_03.append(row[4])
-    elif row[1] == 0.25254:
-        feed_co2_27_25254.append(row[0])
-        feed_co_27_25254.append(row[1])
-        temperature_27_25254.append(row[2])
-        pressure_27_25254.append(row[3])
-        experimental_27_25254.append(row[4])
-    elif row[1] == 0.065:
-        feed_co2_27_065.append(row[0])
-        feed_co_27_065.append(row[1])
-        temperature_27_065.append(row[2])
-        pressure_27_065.append(row[3])
-        experimental_27_065.append(row[4])
-    elif row[1] == 0.50183:
-        feed_co2_27_50183.append(row[0])
-        feed_co_27_50183.append(row[1])
-        temperature_27_50183.append(row[2])
-        pressure_27_50183.append(row[3])
-        experimental_27_50183.append(row[4])
-    elif row[1] == 0.138:
-        feed_co2_27_138.append(row[0])
-        feed_co_27_138.append(row[1])
-        temperature_27_138.append(row[2])
-        pressure_27_138.append(row[3])
-        experimental_27_138.append(row[4])
-    elif row[1] == 0.134:
-        feed_co2_27_134.append(row[0])
-        feed_co_27_134.append(row[1])
-        temperature_27_134.append(row[2])
-        pressure_27_134.append(row[3])
-        experimental_27_134.append(row[4])
-    elif row[1] == 0.117:
-        feed_co2_27_117.append(row[0])
-        feed_co_27_117.append(row[1])
-        temperature_27_117.append(row[2])
-        pressure_27_117.append(row[3])
-        experimental_27_117.append(row[4])
-    elif row[1] == 0.115:
-        feed_co2_27_115.append(row[0])
-        feed_co_27_115.append(row[1])
-        temperature_27_115.append(row[2])
-        pressure_27_115.append(row[3])
-        experimental_27_115.append(row[4])
-    elif row[1] == 0.089:
-        feed_co2_27_089.append(row[0])
-        feed_co_27_089.append(row[1])
-        temperature_27_089.append(row[2])
-        pressure_27_089.append(row[3])
-        experimental_27_089.append(row[4])
-    elif row[1] == 0.046:
-        feed_co2_27_046.append(row[0])
-        feed_co_27_046.append(row[1])
-        temperature_27_046.append(row[2])
-        pressure_27_046.append(row[3])
-        experimental_27_046.append(row[4])
-    elif row[1] == 0.019:
-        feed_co2_27_019.append(row[0])
-        feed_co_27_019.append(row[1])
-        temperature_27_019.append(row[2])
-        pressure_27_019.append(row[3])
-        experimental_27_019.append(row[4])
+    # verificar o valor da coluna B (index 1) e fazer o append nas listas correspondentes
+    if row[0] == 0.58:
+        feed_ch4_36_058.append(row[0])
+        v_36_058.append(row[3])
+        temperature_36_058.append(row[1])
+        pressure_36_058.append(row[2])
+        experimental_36_058.append(row[4])
+    elif row[0] == 0.098:
+        feed_ch4_36_0098.append(row[0])
+        v_36_0098.append(row[3])
+        temperature_36_0098.append(row[1])
+        pressure_36_0098.append(row[2])
+        experimental_36_0098.append(row[4])
+    elif row[0] == 0.137:
+        feed_ch4_36_0137.append(row[1])
+        v_36_0137.append(row[3])
+        temperature_36_0137.append(row[1])
+        pressure_36_0137.append(row[2])
+        experimental_36_0137.append(row[4])
+    elif row[0] == 0.167:
+        feed_ch4_36_0167.append(row[1])
+        v_36_0167.append(row[3])
+        temperature_36_0167.append(row[1])
+        pressure_36_0167.append(row[2])
+        experimental_36_0167.append(row[4])
+    elif row[0] == 0.177:
+        feed_ch4_36_0177.append(row[1])
+        v_36_0177.append(row[3])
+        temperature_36_0177.append(row[1])
+        pressure_36_0177.append(row[2])
+        experimental_36_0177.append(row[4])
+    elif row[0] == 0.182:
+        feed_ch4_36_0182.append(row[1])
+        v_36_0182.append(row[3])
+        temperature_36_0182.append(row[1])
+        pressure_36_0182.append(row[2])
+        experimental_36_0182.append(row[4])
+    elif row[0] == 0.247:
+        feed_ch4_36_0247.append(row[1])
+        v_36_0247.append(row[3])
+        temperature_36_0247.append(row[1])
+        pressure_36_0247.append(row[2])
+        experimental_36_0247.append(row[4])
+    elif row[0] == 0.3:
+        feed_ch4_36_03.append(row[1])
+        v_36_03.append(row[3])
+        temperature_36_03.append(row[1])
+        pressure_36_03.append(row[2])
+        experimental_36_03.append(row[4])
+    elif row[0] == 0.214:
+        feed_ch4_36_0214.append(row[0])
+        v_36_0214.append(row[3])
+        temperature_36_0214.append(row[1])
+        pressure_36_0214.append(row[2])
+        experimental_36_0214.append(row[4])
+    elif row[0] == 0.301:
+        feed_ch4_36_0301.append(row[0])
+        v_36_0301.append(row[3])
+        temperature_36_0301.append(row[1])
+        pressure_36_0301.append(row[2])
+        experimental_36_0301.append(row[4])
+    elif row[0] == 0.321:
+        feed_ch4_36_0321.append(row[0])
+        v_36_0321.append(row[3])
+        temperature_36_0321.append(row[1])
+        pressure_36_0321.append(row[2])
+        experimental_36_0321.append(row[4])
+    elif row[0] == 0.34:
+        feed_ch4_36_034.append(row[0])
+        v_36_034.append(row[3])
+        temperature_36_034.append(row[1])
+        pressure_36_034.append(row[2])
+        experimental_36_034.append(row[4])
+    elif row[0] == 0.349:
+        feed_ch4_36_0349.append(row[0])
+        v_36_0349.append(row[3])
+        temperature_36_0349.append(row[1])
+        pressure_36_0349.append(row[2])
+        experimental_36_0349.append(row[4])
+    elif row[0] == 0.408:
+        feed_ch4_36_0408.append(row[0])
+        v_36_0408.append(row[3])
+        temperature_36_0408.append(row[1])
+        pressure_36_0408.append(row[2])
+        experimental_36_0408.append(row[4])
+    elif row[0] == 0.508:
+        feed_ch4_36_0508.append(row[0])
+        v_36_0508.append(row[3])
+        temperature_36_0508.append(row[1])
+        pressure_36_0508.append(row[1])
+        experimental_36_0508.append(row[4])
 
-# Exibindo os dados armazenados:
+# Exibindo os dados armazenados para cada conjunto:
+print("Dados armazenados para 0.058:")
+print("Feed CH4:", feed_ch4_36_058)
+print("V:", v_36_058)
+print("Temperature:", temperature_36_058)
+print("Pressure:", pressure_36_058)
+print("Experimental:", experimental_36_058)
 
-print("CO2 Feed (Liquid 27 - 0.004):", feed_co2_27_004)
-print("CO Feed (Liquid 27 - 0.004):", feed_co_27_004)
-print("Temperature (Liquid 27 - 0.004):", temperature_27_004)
-print("Pressure (Liquid 27 - 0.004):", pressure_27_004)
-print("Experimental (Liquid 27 - 0.004):", experimental_27_004)
-
-print("CO2 Feed (Liquid 27 - 0.007):", feed_co2_27_007)
-print("CO Feed (Liquid 27 - 0.007):", feed_co_27_007)
-print("Temperature (Liquid 27 - 0.007):", temperature_27_007)
-print("Pressure (Liquid 27 - 0.007):", pressure_27_007)
-print("Experimental (Liquid 27 - 0.007):", experimental_27_007)
-
-print("CO2 Feed (Liquid 27 - 0.0098):", feed_co2_27_0098)
-print("CO Feed (Liquid 27 - 0.0098):", feed_co_27_0098)
-print("Temperature (Liquid 27 - 0.0098):", temperature_27_0098)
-print("Pressure (Liquid 27 - 0.0098):", pressure_27_0098)
-print("Experimental (Liquid 27 - 0.0098):", experimental_27_0098)
-
-print("CO2 Feed (Liquid 27 - 0.010107):", feed_co2_27_010107)
-print("CO Feed (Liquid 27 - 0.010107):", feed_co_27_010107)
-print("Temperature (Liquid 27 - 0.010107):", temperature_27_010107)
-print("Pressure (Liquid 27 - 0.010107):", pressure_27_010107)
-print("Experimental (Liquid 27 - 0.010107):", experimental_27_010107)
-
-print("CO2 Feed (Liquid 27 - 0.05031):", feed_co2_27_05031)
-print("CO Feed (Liquid 27 - 0.05031):", feed_co_27_05031)
-print("Temperature (Liquid 27 - 0.05031):", temperature_27_05031)
-print("Pressure (Liquid 27 - 0.05031):", pressure_27_05031)
-print("Experimental (Liquid 27 - 0.05031):", experimental_27_05031)
-
-print("CO2 Feed (Liquid 27 - 0.03):", feed_co2_27_03)
-print("CO Feed (Liquid 27 - 0.03):", feed_co_27_03)
-print("Temperature (Liquid 27 - 0.03):", temperature_27_03)
-print("Pressure (Liquid 27 - 0.03):", pressure_27_03)
-print("Experimental (Liquid 27 - 0.03):", experimental_27_03)
-
-print("CO2 Feed (Liquid 27 - 0.25254):", feed_co2_27_25254)
-print("CO Feed (Liquid 27 - 0.25254):", feed_co_27_25254)
-print("Temperature (Liquid 27 - 0.25254):", temperature_27_25254)
-print("Pressure (Liquid 27 - 0.25254):", pressure_27_25254)
-print("Experimental (Liquid 27 - 0.25254):", experimental_27_25254)
-
-print("CO2 Feed (Liquid 27 - 0.065):", feed_co2_27_065)
-print("CO Feed (Liquid 27 - 0.065):", feed_co_27_065)
-print("Temperature (Liquid 27 - 0.065):", temperature_27_065)
-print("Pressure (Liquid 27 - 0.065):", pressure_27_065)
-print("Experimental (Liquid 27 - 0.065):", experimental_27_065)
-
-print("CO2 Feed (Liquid 27 - 0.50183):", feed_co2_27_50183)
-print("CO Feed (Liquid 27 - 0.50183):", feed_co_27_50183)
-print("Temperature (Liquid 27 - 0.50183):", temperature_27_50183)
-print("Pressure (Liquid 27 - 0.50183):", pressure_27_50183)
-print("Experimental (Liquid 27 - 0.50183):", experimental_27_50183)
-
-print("CO2 Feed (Liquid 27 - 0.138):", feed_co2_27_138)
-print("CO Feed (Liquid 27 - 0.138):", feed_co_27_138)
-print("Temperature (Liquid 27 - 0.138):", temperature_27_138)
-print("Pressure (Liquid 27 - 0.138):", pressure_27_138)
-print("Experimental (Liquid 27 - 0.138):", experimental_27_138)
-
-print("CO2 Feed (Liquid 27 - 0.134):", feed_co2_27_134)
-print("CO Feed (Liquid 27 - 0.134):", feed_co_27_134)
-print("Temperature (Liquid 27 - 0.134):", temperature_27_134)
-print("Pressure (Liquid 27 - 0.134):", pressure_27_134)
-print("Experimental (Liquid 27 - 0.134):", experimental_27_134)
-
-print("CO2 Feed (Liquid 27 - 0.117):", feed_co2_27_117)
-print("CO Feed (Liquid 27 - 0.117):", feed_co_27_117)
-print("Temperature (Liquid 27 - 0.117):", temperature_27_117)
-print("Pressure (Liquid 27 - 0.117):", pressure_27_117)
-print("Experimental (Liquid 27 - 0.117):", experimental_27_117)
-
-print("CO2 Feed (Liquid 27 - 0.115):", feed_co2_27_115)
-print("CO Feed (Liquid 27 - 0.115):", feed_co_27_115)
-print("Temperature (Liquid 27 - 0.115):", temperature_27_115)
-print("Pressure (Liquid 27 - 0.115):", pressure_27_115)
-print("Experimental (Liquid 27 - 0.115):", experimental_27_115)
-
-print("CO2 Feed (Liquid 27 - 0.089):", feed_co2_27_089)
-print("CO Feed (Liquid 27 - 0.089):", feed_co_27_089)
-print("Temperature (Liquid 27 - 0.089):", temperature_27_089)
-print("Pressure (Liquid 27 - 0.089):", pressure_27_089)
-print("Experimental (Liquid 27 - 0.089):", experimental_27_089)
-
-print("CO2 Feed (Liquid 27 - 0.046):", feed_co2_27_046)
-print("CO Feed (Liquid 27 - 0.046):", feed_co_27_046)
-print("Temperature (Liquid 27 - 0.046):", temperature_27_046)
-print("Pressure (Liquid 27 - 0.046):", pressure_27_046)
-print("Experimental (Liquid 27 - 0.046):", experimental_27_046)
-
-print("CO2 Feed (Liquid 27 - 0.046):", feed_co2_27_019)
-print("CO Feed (Liquid 27 - 0.046):", feed_co_27_019)
-print("Temperature (Liquid 27 - 0.046):", temperature_27_019)
-print("Pressure (Liquid 27 - 0.046):", pressure_27_019)
-print("Experimental (Liquid 27 - 0.046):", experimental_27_019)
 
 # criando a nova planilha:
 # caminho do arquivo:
-filtered_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CO+CO2\Seleção Treino_Teste\Data Fraction Train\Fraction Gas Train\fraction_27_gas_train.xlsx"
+filtered_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Data Fraction Train\Fraction Gas Train\fraction_36_gas_train.xlsx"
 
 # carregar a planilha existente:
 try:
@@ -322,27 +221,27 @@ for sheet in workbook.sheetnames:
     del workbook[sheet]
 
 # adicionar os dados filtrados do líquido:
-for ref_value, data in [(0.004, (feed_co2_27_004, feed_co_27_004, temperature_27_004, pressure_27_004, experimental_27_004)),
-                        (0.007, (feed_co2_27_007, feed_co_27_007, temperature_27_007, pressure_27_007, experimental_27_007)),
-                        (0.0098, (feed_co2_27_0098, feed_co_27_0098, temperature_27_0098, pressure_27_0098, experimental_27_0098)),
-                        (0.010107, (feed_co2_27_010107, feed_co_27_010107, temperature_27_010107, pressure_27_010107, experimental_27_010107)),
-                        (0.05031, (feed_co2_27_05031, feed_co_27_05031, temperature_27_05031, pressure_27_05031, experimental_27_05031)),
-                        (0.03, (feed_co2_27_03, feed_co_27_03, temperature_27_03, pressure_27_03, experimental_27_03)),
-                        (0.25254, (feed_co2_27_25254, feed_co_27_25254, temperature_27_25254, pressure_27_25254, experimental_27_25254)),
-                        (0.065, (feed_co2_27_065, feed_co_27_065, temperature_27_065, pressure_27_065, experimental_27_065)),
-                        (0.50183, (feed_co2_27_50183, feed_co_27_50183, temperature_27_50183, pressure_27_50183, experimental_27_50183)),
-                        (0.138, (feed_co2_27_138, feed_co_27_138, temperature_27_138, pressure_27_138, experimental_27_138)),
-                        (0.134, (feed_co2_27_134, feed_co_27_134, temperature_27_134, pressure_27_134, experimental_27_134)),
-                        (0.117, (feed_co2_27_117, feed_co_27_117, temperature_27_117, pressure_27_117, experimental_27_117)),
-                        (0.115, (feed_co2_27_115, feed_co_27_115, temperature_27_115, pressure_27_115, experimental_27_115)),
-                        (0.089, (feed_co2_27_089, feed_co_27_089, temperature_27_089, pressure_27_089, experimental_27_089)),
-                        (0.046, (feed_co2_27_046, feed_co_27_046, temperature_27_046, pressure_27_046, experimental_27_046)),
-                        (0.019, (feed_co2_27_019, feed_co_27_019, temperature_27_019, pressure_27_019, experimental_27_019))]:
-
+for ref_value, data in [
+    (0.58, (feed_ch4_36_058, v_36_058, temperature_36_058, pressure_36_058, experimental_36_058)),
+    (0.098, (feed_ch4_36_0098, v_36_0098, temperature_36_0098, pressure_36_0098, experimental_36_0098)),
+    (0.137, (feed_ch4_36_0137, v_36_0137, temperature_36_0137, pressure_36_0137, experimental_36_0137)),
+    (0.167, (feed_ch4_36_0167, v_36_0167, temperature_36_0167, pressure_36_0167, experimental_36_0167)),
+    (0.177, (feed_ch4_36_0177, v_36_0177, temperature_36_0177, pressure_36_0177, experimental_36_0177)),
+    (0.182, (feed_ch4_36_0182, v_36_0182, temperature_36_0182, pressure_36_0182, experimental_36_0182)),
+    (0.247, (feed_ch4_36_0247, v_36_0247, temperature_36_0247, pressure_36_0247, experimental_36_0247)),
+    (0.3, (feed_ch4_36_03, v_36_03, temperature_36_03, pressure_36_03, experimental_36_03)),
+    (0.214, (feed_ch4_36_0214, v_36_0214, temperature_36_0214, pressure_36_0214, experimental_36_0214)),
+    (0.301, (feed_ch4_36_0301, v_36_0301, temperature_36_0301, pressure_36_0301, experimental_36_0301)),
+    (0.321, (feed_ch4_36_0321, v_36_0321, temperature_36_0321, pressure_36_0321, experimental_36_0321)),
+    (0.34, (feed_ch4_36_034, v_36_034, temperature_36_034, pressure_36_034, experimental_36_034)),
+    (0.349, (feed_ch4_36_0349, v_36_0349, temperature_36_0349, pressure_36_0349, experimental_36_0349)),
+    (0.408, (feed_ch4_36_0408, v_36_0408, temperature_36_0408, pressure_36_0408, experimental_36_0408)),
+    (0.508, (feed_ch4_36_0508, v_36_0508, temperature_36_0508, pressure_36_0508, experimental_36_0508))
+]:
     sheet_name = f'frac_{ref_value}_data_liquid'
     ws = workbook.create_sheet(title=sheet_name)
 
-    headers = [f'Feed CO2 Liquid {ref_value}', f'Feed CO Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'Experimental Liquid {ref_value}']
+    headers = [f'Feed CH4 gas {ref_value}', f'V Gas {ref_value}', f'Temperature Gas {ref_value}', f'Pressure Gas {ref_value}', f'Rho Gas {ref_value}']
     ws.append(headers)
 
     rows = zip(*data)
