@@ -82,7 +82,7 @@ for ref_value, data in [(36, (feed_ch4_36, temperature_36,  pressure_36, v_36, e
     sheet_name = f'ref_{ref_value}_data_Liquid'
     ws = workbook.create_sheet(title=sheet_name)
 
-    headers = [f'Feed CH4 Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'V Liquid {ref_value}', f'Rho Liquid {ref_value}', f'Feed CO2 Liquid {ref_value}']
+    headers = [f'Feed CH4 Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'V Liquid {ref_value}', f'Rho Liquid {ref_value}', f'Feed CO Liquid {ref_value}']
     ws.append(headers)
 
     rows = zip(*data)

@@ -5,7 +5,7 @@ from openpyxl import load_workbook
 from openpyxl import Workbook
 
 # Caminho do arquivo
-file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Filtered References Test\References Liquid Test\filtered_data_references_liquid_test.xlsx"
+file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Filtered References Train\References Liquid Train\filtered_data_references_liquid_train.xlsx"
 workbook = load_workbook(file_path)
 
 # DADOS LÍQUIDO - NOVOS VALORES:
@@ -397,7 +397,7 @@ for row in sheet.iter_rows(min_row=2, values_only=True):  # Supondo que 'data' s
 
 # criando a nova planilha:
 # caminho do arquivo:
-filtered_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Data Fraction Test\Fraction Liquid Test\fraction_40_liquid_test.xlsx"
+filtered_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Data Fraction Train\Fraction Liquid Train\fraction_40_liquid_train.xlsx"
 
 # carregar a planilha existente:
 try:
@@ -446,7 +446,7 @@ for ref_value, data in [
     sheet_name = f'frac_{ref_value}_data_liquid'
     ws = workbook.create_sheet(title=sheet_name)
 
-    headers = [f'Feed CH4 Liquid {ref_value}',  f'Feed CO Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'Rho Liquid {ref_value}']
+    headers = [f'Feed CH4 Liquid {ref_value}',  f'Feed CO2 Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'Rho Liquid {ref_value}']
     ws.append(headers)
 
     rows = zip(*data)

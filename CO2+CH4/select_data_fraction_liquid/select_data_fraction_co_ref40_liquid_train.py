@@ -446,7 +446,7 @@ for ref_value, data in [
     sheet_name = f'frac_{ref_value}_data_liquid'
     ws = workbook.create_sheet(title=sheet_name)
 
-    headers = [f'Feed CH4 Liquid {ref_value}',  f'Feed CO2 Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'Rho Liquid {ref_value}']
+    headers = [f'Feed CH4 Liquid {ref_value}',  f'Feed CO Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'Rho Liquid {ref_value}']
     ws.append(headers)
 
     rows = zip(*data)

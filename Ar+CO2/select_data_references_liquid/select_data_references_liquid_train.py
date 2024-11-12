@@ -4,7 +4,7 @@ from openpyxl import load_workbook
 from openpyxl import Workbook
 
 # Caminho do arquivo
-file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Train_Test Liquid\dados_teste_com_densidade_liquid.xlsx"
+file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Train_Test Liquid\dados_treinamento_com_densidade_liquid.xlsx"
 workbook = load_workbook(file_path)
 
 # DADOS LÍQUIDO:
@@ -62,7 +62,7 @@ print("Experimental (Liquid 40):", experimental_40)
 print("CO Feed (Liquid 40):", experimental_40)
 
 # caminho do arquivo:
-filtered_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Filtered References Test\References Liquid Test\filtered_data_references_liquid_test.xlsx"
+filtered_file_path = r"C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Seleção Treino_Teste\Filtered References Train\References Liquid Train\filtered_data_references_liquid_train.xlsx"
 
 # carregar a planilha existente:
 try:
@@ -82,7 +82,7 @@ for ref_value, data in [(36, (feed_ch4_36, temperature_36,  pressure_36, v_36, e
     sheet_name = f'ref_{ref_value}_data_Liquid'
     ws = workbook.create_sheet(title=sheet_name)
 
-    headers = [f'Feed CH4 Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'V Liquid {ref_value}', f'Rho Liquid {ref_value}', f'Feed CO Liquid {ref_value}']
+    headers = [f'Feed CH4 Liquid {ref_value}', f'Temperature Liquid {ref_value}', f'Pressure Liquid {ref_value}', f'V Liquid {ref_value}', f'Rho Liquid {ref_value}', f'Feed CO2 Liquid {ref_value}']
     ws.append(headers)
 
     rows = zip(*data)
