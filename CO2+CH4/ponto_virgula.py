@@ -1,7 +1,7 @@
 import pandas as pd
 from openpyxl import Workbook, load_workbook
 
-file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank.csv'
+file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank NOVO.csv'
 
 df = pd.read_csv(file_path, encoding='ISO-8859-1', sep=';')
 
@@ -20,7 +20,7 @@ def process_value(value):
 
 df = df.applymap(process_value)
 
-excel_original = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank.xlsx'
+excel_original = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank NOVO.xlsx'
 
 workbook = load_workbook(excel_original)
 
@@ -44,7 +44,7 @@ if "Sheet" in new_workbook.sheetnames:
     std = new_workbook["Sheet"]
     new_workbook.remove(std)
 
-novo_excel = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank NOVO.xlsx'
+novo_excel = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank NOVO2.xlsx'
 
 new_workbook.save(novo_excel)
 

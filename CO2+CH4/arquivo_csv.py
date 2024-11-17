@@ -3,7 +3,7 @@ import pandas as pd
 import openpyxl
 import csv
 
-file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank.xlsx'
+file_path = r'C:\Users\03950025081\Desktop\Simulações Thermobuilder\CH4+CO2\Metan Databank NOVO.xlsx'
 
 workbook = openpyxl.load_workbook(file_path, data_only=True) # carregar a planilha com data_only=True para ler os resultados das fórmulas
 
